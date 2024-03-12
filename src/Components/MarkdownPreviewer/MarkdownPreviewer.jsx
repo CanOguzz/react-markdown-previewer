@@ -4,26 +4,24 @@ import Marked, { marked } from "marked";
 import "./MarkdownPreviewer.css";
 
 const defaultContent = `
-![Dwinatech Logo](https://yt3.ggpht.com/ytc/AKedOLRCB8l9dwq0qVxZIb7C7b1G5lvYlFIYzymD1Dkx=s176-c-k-c0x00ffffff-no-rj)
+![Dwinatech Logo](https://avatars.githubusercontent.com/u/64172912?v=4)
 
 # Hello, 
-## You'r welcom at
-### DwinaTech Channel
+## About me
+### I'm Can, a newly graduated computer engineer who previously worked in the computer games industry.
 
 
-\`<div>Inline code</div>\`
+\`<title>Welcome to my Markdown Previewer</title>\`
 
 \`\`\`
-const multipleLineCode = (param) => {
-    if(param) {
-        return param
-    }
+const SayHello = (name) => {
+    return conole.log(\`Hello, \${name}\`);
 }
 \`\`\`
 
 **Some bold text**
 
-[Visit My Channel](https://www.youtube.com/channel/UCSS0kFyF7KWjE19Rj9PgNQA)
+[Visit Github Profile](https://github.com/CanOguzz)
 
 > Block Quot
 
