@@ -19,7 +19,11 @@ renderer.link = function(href, title, text) {
 }
 const Editor = ({content, handleTextareaChange}) => <textarea id="editor" value={content} onChange={handleTextareaChange}/>;
 
-const Previewer = ({content}) => <div id="previewer">{content}</div>;
+const Previewer = ({content}) => <div id="previewer" dangerouslySetInnerHTML={{
+  __html: marked(content, { renderer: renderer })
+
+}}></div>;
+
 export const MarkdownPreviewer = () => {
   
   const[content, setContent] = React.useState("testet");
