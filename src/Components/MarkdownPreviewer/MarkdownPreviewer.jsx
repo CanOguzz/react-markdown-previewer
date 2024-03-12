@@ -12,6 +12,11 @@ marked.setOptions({
     return Prism.highlight(code, Prism.languages.javascript, "javascript");
   } 
 });
+
+const renderer = new marked.Renderer();
+renderer.link = function(href, title, text) { 
+  return `<a target="_blank" href="${href}">${text}</a>`; 
+}
 const Editor = ({content, handleTextareaChange}) => <textarea id="editor" value={content} onChange={handleTextareaChange}/>;
 
 const Previewer = ({content}) => <div id="previewer">{content}</div>;
