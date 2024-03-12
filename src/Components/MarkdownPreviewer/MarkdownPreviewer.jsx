@@ -1,9 +1,17 @@
 import React from "react";
-import marked from "marked";
-import prism from "prismjs";
+import Prism from "prismjs"
+import  Marked, { marked }  from "marked";
+
 
 import "./MarkdownPreviewer.css";
 
+
+marked.setOptions({ 
+  breaks: true,
+  highlight: function(code) {
+    return Prism.highlight(code, Prism.languages.javascript, "javascript");
+  } 
+});
 const Editor = ({content, handleTextareaChange}) => <textarea id="editor" value={content} onChange={handleTextareaChange}/>;
 
 const Previewer = ({content}) => <div id="previewer">{content}</div>;
