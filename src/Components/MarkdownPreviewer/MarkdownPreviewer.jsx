@@ -15,18 +15,19 @@ const defaultContent = `
 
 \`\`\`
 const SayHello = (name) => {
-    return conole.log(\`Hello, \${name}\`);
+    return console.log(\`Hello, \${name}\`);
 }
 \`\`\`
 
-**Some bold text**
+**“A room without books is like a body without a soul.”
+― Marcus Tullius Cicero**
 
 [Visit Github Profile](https://github.com/CanOguzz)
 
-> Block Quot
+> My Hobbies
 
-1. First list item
-2. Second list item
+1. I love wristwatches
+2. I really like  exploring new places
 `;
 
 marked.setOptions({
